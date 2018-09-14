@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon2.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="alert/dist/sweetalert-dev.js"></script>
+		<link rel="stylesheet" href="alert/dist/sweetalert.css">
+		<script src='Winwheel.js'></script>
+		<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <!-- <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var infowindow;
+
+      function initMap() {
+        var pyrmont = {lat: -33.867, lng: 151.195};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15
+        });
+
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 500,
+          type: ['store']
+        }, callback);
+      }
+
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script> -->
+		<style>
+			#login-div,
+			#search-div,
+			#wheel-section,
+			#history-section {
+				display: none;
+			}
+
+			/* style for error/success messages */
+
+			.success,
+			.error {
+				color: white;
+				padding: 5px;
+				margin: 5px 0 15px 0;
+			}
+
+			.success {
+				background: green;
+			}
+
+			.error {
+				background: red;
+			}
+
+			.span-center {
+				margin: auto;
+				width: 50%;
+				text-align: center;
+			}
+
+			/* style for google maps */
+
+			#map {
+				height: 700px;
+				width: 100%;
+			}
+
+			/* Optional: Makes the sample page fill the window. */
+
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+
+			table#table1 {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+				white-space: nowrap;
+				border: 1px solid black;
+			}
+			tr, td {
+				border: solid thin;
+			}
+			th {
+				text-align:center;
+			}
+		</style>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="index.html">
+							<img src="images/icons/logo-white.png" alt="IMG-LOGO" data-logofixed="images/icons/logo-red.png">
+						</a>
+					</div>
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="index.html">Home</a>
+								</li>
+
+								<li>
+									<a href="gallery.html">Gallery</a>
+								</li>
+
+								<li>
+									<a href="about.html">About</a>
+								</li>
+
+								<li>
+									<a href="blog.html">Blog</a>
+								</li>
+
+								<li>
+									<a href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13">
+				<a href="index.html" class="txt19">Home</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="gallery.html" class="txt19">Gallery</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="about.html" class="txt19">About</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="blog.html" class="txt19">Blog</a>
+			</li>
+
+			<li class="t-center m-b-33">
+				<a href="contact.html" class="txt19">Contact</a>
+			</li>
+
+			<li class="t-center">
+				<!-- Button3 -->
+				<a href="#" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					Old reservation Nancy
+				</a>
+			</li>
+		</ul>
+
+		<!-- - -->
+		<div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
+			<!-- - -->
+			<h4 class="txt20 m-b-33">
+				Gallery
+			</h4>
+
+			<!-- Gallery -->
+			<div class="wrap-gallery-sidebar flex-w">
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-1.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-1.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-2.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-2.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-3.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-3.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-4.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-4.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-8.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-8.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-6.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-6.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-7.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-7.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-5.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-5.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/food-9.jpg" data-lightbox="gallery-footer">
+					<img src="images/food-9.jpg" alt="GALLERY">
+				</a>
+			</div>
+		</div>
+	</aside>
+
+	<!-- Slide1 -->
+	<section class="section-slide">
+		<div class="wrap-slick1">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/slide-1.jpg);">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+							Can't decide what to eat?
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+							Use Food Roulette!
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+							<!-- Button1 -->
+							<a href="#" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Let fate decide!
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide2 -->
+
+				<!-- <div class="item-slick1 item2-slick1" style="background-image: url(images/master-slides-02.jpg);">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							Don't waste your precious brain power!
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+							Use Food Roulette!
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp"> -->
+				<!-- Button1 -->
+				<!-- <a href="#" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Let fate decide!
+							</a>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- Slide3 -->
+
+				<div class="item-slick1 item3-slick1" style="background-image: url(images/slide-2.jpg);">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
+							We got you!
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
+							Use Food Roulette!
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
+							<!-- Button1 -->
+							<a href="#" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Let fate decide!
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="wrap-slick1-dots"></div>
+		</div>
+	</section>
+
+	<!-- Sign up -->
+	<div class="section-signup bg1-pattern p-t-85 p-b-85" id="sign-up-div">
+		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5" id="sign-up">
+			<span class="txt5 m-10">
+				Make an account!
+			</span>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="first-name" placeholder="First Name">
+				<i class="fa fa-user ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="last-name" placeholder="Last Name">
+				<i class="fa fa-user ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="user-name" placeholder="Username">
+				<i class="fa fa-user ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Address">
+				<i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+
+			<!-- Button3 -->
+			<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
+				Sign-up
+			</button>
+			<br>
+			<a href="#" class="txt4" id="login-link">
+        Have an account? Login here.
+        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+      </a>
+		</form>
+	</div>
+
+	<!-- Login -->
+	<div class="section-signup bg1-pattern p-t-85 p-b-85" id="login-div">
+
+		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5" id="login">
+			<span class="txt5 m-10">
+        Login!
+      </span>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Address">
+				<i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<!-- Button3 -->
+			<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
+        Submit
+      </button>
+			<br></br>
+			<a href="#" class="txt4" id="signup-link">
+        Don't have an account? Sign up here.
+        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+      </a>
+		</form>
+
+	</div>
+
+	<!-- Message -->
+	<!-- <div class="section-signup bg1-pattern p-t-85 p-b-85" id="message-div">
+		<span class="tit2 p-l-15 p-r-15">
+			Logged in as
+		</span>
+
+		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5" id="message">
+			<span class="txt5 m-10">
+				Login!
+			</span>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Address">
+				<i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
+			</div> -->
+
+	<!-- Button3 -->
+	<!-- <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
+				Submit
+			</button>
+			<br></br>
+			<a href="#" class="txt4" id="signup-link">
+				Don't have an account? Sign up here.
+				<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+			</a>
+		</form>
+
+	</div> -->
+
+	<!-- Food Search -->
+	<div class="section-signup bg1-pattern p-t-85 p-b-85" id="search-div">
+		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5" id="search-form">
+			<span class="txt5 m-10">
+				What are you looking for?
+			</span>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="food_type" placeholder="What are you craving?">
+				<i class="fa fa-search ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="zip_code" placeholder="Zip Code">
+				<i class="fa fa-map-marker ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<select class="selection-1" name="price_range">
+          <option value="1">$</option>
+          <option value="2">$$</option>
+          <option value="3">$$$</option>
+          <option value="4">$$$$</option>
+        </select>
+			</div>
+
+			<!-- Button3 -->
+			<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
+				Search
+			</button>
+		</form>
+	</div>
+
+	<!-- Spin the wheel! -->
+	<section id="wheel-section" class="section-welcome bg-white p-t-120 p-b-105">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-t-45 p-b-30">
+					<div class="wrap-text-welcome t-center">
+						<span class="tit2 t-center">
+							Food Roulette
+						</span>
+
+						<h3 class="tit3 t-center m-b-35 m-t-5">
+							Welcome
+						</h3>
+
+						<p class="t-center m-b-22 size3 m-l-r-auto">
+							We're almost there!
+						</p>
+
+						<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-l-r-auto" id="spin-button">
+              Spin
+            </button>
+						<a id="edit-search-link" href="#">Edit Search</a><br />
+
+					</div>
+				</div>
+
+				<div class="col-md-6 p-b-30">
+					<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+						<td width="438" height="582" class="example_wheel_of_fortune" align="center" valign="center">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8595;</span>
+
+							<canvas id="canvas" width="400" height="400">
+                        <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                    </canvas>
+						</td>
+						<!-- Wheel -->
+						<div id="wheel">
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Thank you -->
+	<section>
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/bg-discover.jpg);">
+			<span class="tit2 p-l-15 p-r-15">
+					Thank you for using
+				</span>
+
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+					Food Roulette
+				</h3>
+		</div>
+	</section>
+
+
+	<!-- Search History -->
+	<section id="history-section" class="bg-white p-t-85 p-b-85 t-center p-l-15 p-r-15">
+		<span class="tit2 t-center">
+				Food Roulette
+			</span>
+
+		<h3 class="tit3 t-center m-b-35 m-t-5">
+				Search History
+			</h3>
+
+		<div class="content-intro bg-white">
+			<div class="container">
+				<div class="row" id="no-history">
+					<table class="center" id="table1" style="text-align:center; border: 1px solid black;">
+						<thead id="table-head">
+							<!-- <tr class="bg1 txt13">
+								<th style="width: 400px;">Restaurant Name</th>
+								<th style="width: 300px;">Food Category</th>
+								<th style="width: 100px;">Rating</th>
+								<th style="width: 100px;">Price</th>
+							</tr> -->
+						</thead>
+						<tbody id="table-body">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Location -->
+	<!-- <section class="section-review bg1-pattern p-t-100 p-b-110"> -->
+		<!-- - -->
+		<!-- <div class="title-review t-center m-b-2">
+			<span class="tit2 p-l-15 p-r-15">
+				Restaurant
+			</span>
+
+			<h3 class="tit8 t-center p-l-20 p-r-15 p-t-3">
+				Location
+			</h3>
+		</div> -->
+
+		<!-- Display Map -->
+		<!-- <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpdjDvdd5hE922G4eBoOpmAck5Sz6y0SY&libraries=places&callback=initMap" async defer></script> -->
+
+		<!-- <div>
+			<div id="map"></div>
+			<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+			<script>
+				var map = new google.maps.Map(document.getElementById('map'), {
+					center: {
+						lat: 29.7604,
+						lng: -95.3698
+					},
+					zoom: 12
+				});
+			</script>
+		</div> -->
+
+		<!-- <div id="map"></div>
+		<script>
+		function initMap() {
+			const mapDiv = document.getElementById('map')
+			const options = {
+				zoom: 12,
+				center: { lat: 29.7604, lng: -95.3698 }
+			}
+			const map = new google.maps.Map(mapDiv, options)
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+		 async defer></script> -->
+	<!-- </section> -->
+
+	<!-- Blog -->
+	<!-- <section class="section-blog bg-white p-t-115 p-b-123">
+		<div class="container">
+			<div class="title-section-ourmenu t-center m-b-22">
+				<span class="tit2 t-center">
+					Latest News
+				</span>
+
+				<h3 class="tit5 t-center m-t-2">
+					The Blog
+				</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 p-t-30"> -->
+
+	<!-- Block1 -->
+	<!-- <div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
+
+							<div class="time-blog">
+								21 Dec 2017
+							</div>
+						</div>
+
+						<div class="wrap-text-blo1 p-t-35">
+							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+								Best Places for Wine
+							</h4></a>
+
+							<p class="m-b-20">
+								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
+							</p>
+
+							<a href="blog-detail.html" class="txt4">
+								Continue Reading
+								<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-t-30"> -->
+
+	<!-- Block1 -->
+	<!-- <div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+							<a href="blog-detail.html"><img src="images/blog-02.jpg" alt="IMG-INTRO"></a>
+
+							<div class="time-blog">
+								15 Dec 2017
+							</div>
+						</div>
+
+						<div class="wrap-text-blo1 p-t-35">
+							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+								Eggs and Cheese
+							</h4></a>
+
+							<p class="m-b-20">
+								Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
+							</p>
+
+							<a href="blog-detail.html" class="txt4">
+								Continue Reading
+								<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-t-30"> -->
+
+	<!-- Block1 -->
+	<!-- <div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+							<a href="blog-detail.html"><img src="images/blog-03.jpg" alt="IMG-INTRO"></a>
+
+							<div class="time-blog">
+								12 Dec 2017
+							</div>
+						</div>
+
+						<div class="wrap-text-blo1 p-t-35">
+							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+								Style the Wedding Party
+							</h4></a>
+
+							<p class="m-b-20">
+								Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
+							</p>
+
+							<a href="blog-detail.html" class="txt4">
+								Continue Reading
+								<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section> -->
+
+	<!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Contact Us
+					</h4>
+
+					<ul class="m-b-70">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i> Flatiron School
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i> (123) 456-7890
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i> food@foodroulette.com
+						</li>
+					</ul>
+
+					<!-- - -->
+					<h4 class="txt13 m-b-32">
+						Opening Times
+					</h4>
+
+					<ul>
+						<li class="txt14">
+							All Day
+						</li>
+
+						<li class="txt14">
+							Every Day
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Latest twitter
+					</h4>
+
+					<div class="m-b-25">
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							@foodroulette
+						</a>
+
+						<p class="txt14 m-b-18">
+							Where should you eat? #foodroulette
+							<a href="#" class="txt15">
+								https://buff.ly/2zaSfAQ
+							</a>
+						</p>
+
+						<span class="txt16">
+							08 Sept 2018
+						</span>
+					</div>
+
+					<div>
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							@foodroulette
+						</a>
+
+						<p class="txt14 m-b-18">
+							I wish there was an app that would just choose where I should eat.. there is!
+							<a href="#" class="txt15">
+								https://buff.ly/2zaSfAQ
+							</a>
+						</p>
+
+						<span class="txt16">
+							10 Sept 2018
+						</span>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-38">
+						Gallery
+					</h4>
+
+					<!-- Gallery footer -->
+					<div class="wrap-gallery-footer flex-w">
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-1.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-1.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-2.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-2.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-3.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-3.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-4.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-4.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-5.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-5.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-6.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-6.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-7.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-7.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-8.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-8.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-9.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-9.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-10.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-10.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-11.jpg" data-lightbox="gallery-footer">
+							<img src="images/food-11.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/food-12jpg" data-lightbox="gallery-footer">
+							<img src="images/food-12.jpg" alt="GALLERY">
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			<div class="container">
+				<div class="flex-sb-m flex-w p-t-22 p-b-22">
+					<div class="p-t-5 p-b-5">
+						<a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+						<a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="txt17 p-r-20 p-t-5 p-b-5">
+						Copyright &copy; 2018 All rights reserved | This template is made with <i class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+
+
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript">
+		$('.parallax100').parallax100();
+	</script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="index.js"></script>
+	<script type="text/javascript" src="http://dougtesting.net/elements/javascript/TweenMax.min.js"></script>
+
+
+</body>
+
+</html>
